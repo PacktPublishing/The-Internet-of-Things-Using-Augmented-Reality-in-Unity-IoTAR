@@ -1,0 +1,14 @@
+Section 1, Lecture 2
+
+Hey guys so before you officially start with this course you need to ensure that you have all the training material and tools for this course. You will need to purchase the following:
+
+Hardware which is the Particle Photon, soldering iron, breadboard and wires.
+Sensors that interface to the Particle Photon.
+Unity Assets to visualize the data in Augmented Reality.
+Ofcourse, you can work around buying some of the components and assets however they will cost you more time and effort if you are not as experienced. If you are just starting out it is recommended that you stick to the prescribed training material for this course to save you on frustration.
+
+The Bill of Materials for the Training Material is attached in the Resource Section Attached to this lecture. These are all NON-Affiliated links, meaning that I am not affiliated with any of these Vendors.
+
+Resources for this lecture
+ IOTAR BOM for Course.xlsx
+ 

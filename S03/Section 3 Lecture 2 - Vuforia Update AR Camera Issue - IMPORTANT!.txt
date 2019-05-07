@@ -1,0 +1,32 @@
+Section 3, Lecture 7
+Some Students have mentioned that they are getting errors with the AR camera not showing its details in Unity Inspector. If this is the case with you then you can download earlier versions of Vuforia from their developers portal. The version I used is V6.1-17, however if they make significant changes, please inform me as soon as  you can, and i will update the lectures with the latest changes that Vuforia have made. 
+
+Make sure you download the 32-bit Unity SDK, as Vuforia may NOT work with 64bit Unity.
+
+If you are getting white targets, then try rolling back to Unity 5.3. or 5.1 - 32bit
+
+Here is the link to the Archive Vuforia SDK's on Github.
+
+https://www.dropbox.com/s/luekxq17pllo5xs/vuforia-unity-6-1-17.unitypackage?dl=0
+
+-------------------------------------------------------
+
+Image Target Textures not show up(white texture shown) at scene (Unity3D)
+
+January 31, 2017 - 12:59am 
+
+1. Check "Asset > Editor > QCAR > ImageTargetTextures > YourDB"
+
+2. If your image imagename_scaled.jpg doesn't true (black/white/transparant) delete it.
+
+3. Drag your Image Texture to  "Asset > Editor > QCAR > ImageTargetTextures > YourDB"
+
+4. Check Image Target in Hierarchy and then ImageTargetBehaviour in Inspector, Choose again your database.
+
+5. Save scene 
+
+----------------------------------------------------------
+
+Vuforia Version 6.2 Changelog
+
+To insert API key, in Inspector/Vuforia Behavior=> Click Open Vuforia Configuration.

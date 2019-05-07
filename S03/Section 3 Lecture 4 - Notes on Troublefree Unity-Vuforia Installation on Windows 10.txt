@@ -1,0 +1,71 @@
+Notes on Troublefree Unity-Vuforia Installation on Windows 10:
+Section 3, Lecture 9
+-=====================================================================================
+-- July 1, 2017
+-- Prashanth (Andy) Menon
+-- Udemy AR course - Notes on troublefree Unity-Vuforia Installation on Windows 10:
+--=====================================================================================
+
+--=====================================================
+-- Choosing the Unity Version
+--=====================================================
+I chose the Unity version from the instructions to fix the White Images in Section 3, Course Update 8.
+Based on this fix, I went for the final v5.3.8f2 (64-bit) Personal from the Unity downloads archive page
+and worked myself back into the lectures.
+
+--=======================================================
+-- Why use the Installer and not the individual downloads
+--=======================================================
+
+Reason: 
+The WebPlayer was not one of the components in the individual downloads on the Unity Archive Page. But when using the installer,
+the Webplayer is provided as one of the options during installation. As I was installing a relatively older version of Unity, I didn't want
+to download the latest version of the WebPlayer and have it conflict with this older Unity version. 
+
+Besides, the installer will help reconcile all component versions automatically (for us noobs) which otherwise may cause issues if they're installed separately.
+
+During installation, the following components were selected:
+1. Unity 5.3.8f2
+2. Web Player
+3. Standard Assets
+4. Windows Build Support
+
+--========================================================================
+-- Following default components were UNCHECKED to speed up installation
+--========================================================================
+1. Microsoft Visual Studio 2015
+2. Documentation
+
+--========================================================================
+-- Vuforia Installation
+--========================================================================
+Initially I downloaded the Vuforia v6.1 package from Dropbox location https://github.com/reigngt09/IoTAR/blob/master/Lab_2_Basic_AR_Cube_App/IOTAR.unitypackage
+and installed it as per the lecture.
+
+But when working with the Cube project, I downloaded the v6.2 from Vuforia download page as advised in the lecture and imported it into Unity.
+
+--========================================================================
+Making this work with Integrated/Laptop Web Camera
+--========================================================================
+The external webcam I have did not work as the driver was unsupported in Windows 10. Therefore I had to fallback on to 
+the Integrated Laptop Camera. 
+
+Confirm that Unity has recognized the integrated camera with these steps:
+
+1. Add the ARCamera asset to Unity as per lecture
+2. Click on the ARCamera to bring up the details in the "Inspector" panel on the right of the screen
+3. Click on the "Open Vuforia Configuration" button in the Inspector panel and scroll down to the "Webcam:" section
+4. The "Camera Device" box should have automatically selected "Integrated Webcam"
+
+Although I could not get this working in the first round, studying the relative position of the camera icon with respect to the cube and 
+the marker in the Scene helped me to get around this problem.
+
+-----------------------------------------------------------------------------
+--Positioning Target in front of the Integrated/Laptop Webcam 
+-----------------------------------------------------------------------------
+When the cube is positioned on the target/marker in Unity, the camera icon on the scene is located on the surface of the target, but at the base of the cube.
+Therefore, I had to lift my marker and tilt it towards the Integrated Webcam to create the effect of the camera sitting on top of the target just as in the Scene.
+This helped the laptop camera lock on to the target and successfully render the cube on the marker.
+
+NOTE: Having a table lamp or other lighting behind the Webcam impedes on the capability of the camera to lock on to the target! Turn off background lighting 
+before running the application.
